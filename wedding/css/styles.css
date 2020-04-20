@@ -3,9 +3,12 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+html {
     font-size: 14px;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
     color: rgb(128, 128, 128);
@@ -28,17 +31,13 @@ h2 {
 
 h3 {
     color: rgb(239, 78, 148);
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
-
-/*p {
-    line-height: 25px;
-}*/
 
 p strong {
     color: black;
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 ul {
@@ -62,11 +61,12 @@ header {
     background-image: url(../images/bride.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 360px;
+    min-height: 360px;
     padding: 4% 2%;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
 }
 
 header h1 {
@@ -83,18 +83,20 @@ header h2 {
 }
 
 header h1 a {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-header .quote {
+header .banner {
     flex-grow: 1;
     text-align: center;
     margin-top: -95px;
 }
 
-header .quote p {
+header .banner p {
     margin: 1%;
 }
+
+
 
 /* NAV styles */
 nav {
@@ -112,33 +114,12 @@ nav .menu  {
 }
 
 nav a:hover {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
-@media screen and (min-width: 990px) {
-    header {
-        padding: 2% 6%;
-    }
-
-    header h2 {
-        font-size: 4.5rem;
-        margin-bottom: 3%;
-    }
-
-    nav .menu {
-        display: flex;
-        flex-wrap: wrap;
-        flex-basis: 100%;
-        justify-content: flex-end;
-    }
-
-    nav label {
-        display: none;
-    }
-
-    nav .menu li {
-        margin-right: 3%;
-    }
+/* font awesome icon */
+nav .fa {
+    font-size: 1.5rem;
 }
 
 
@@ -174,80 +155,20 @@ main h2 {
     padding: 0 2% 6%;
 }
 
-@media screen and (min-width: 768px) {
-    .groom {
-        display: flex;
-        flex-direction: row-reverse;
-        text-align: right;
-        align-items: center;
-        padding: 10% 2% 0%;
-    }
-
-    .groom .groom-info,
-    .bride .bride-info {
-        margin: 0 3%;
-    }
-
-    .bride {
-        display: flex;
-        align-items: center;
-        text-align: left;
-    }
-}
-
-@media screen and (min-width: 990px) {
-    .groom-bride {
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
-    }
-
-    .groom-bride h2,
-    .groom-bride p {
-        flex-basis: 100%;
-    }
-
-    .groom {
-        flex-basis: 50%;
-        padding: 2% 0 6% 7%;
-    }
-
-    .bride {
-        flex-basis: 50%;
-        padding: 2% 7% 6% 0;
-    }
-
-    .groom-bride .heart-icon {
-        color: rgb(239, 78, 148);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        position: absolute;
-        top: 59%;
-        right: 48.5%;
-        background-color: white;
-        border-radius: 50%;
-    }
-
-}
-
 
 
 /* FORM-CONTACT styles */
 .form-contact {
-    background-image: url(../images/img_bg_2.jpg);
+    background: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) ), url(../images/img_bg_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5% 14% 10%;
+    padding: 5% 10% 15%;
     text-align: center;
     overflow: hidden;
 }
 
 .form-contact h2 {
-    color: white;
-    margin-bottom: 0;
+    color: rgb(255, 255, 255);
 } 
 
 .form-contact p {
@@ -269,40 +190,25 @@ form button {
     border-radius: 2px;
     border: none;
     background-color: rgba(152, 146, 146, 0.5);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 form button {
     border-radius: 20px;
     background-color: rgb(239, 78, 148);
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
 form button:hover {
     color: rgb(239, 78, 148);
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 2px rgba(241, 80, 150, 0.73);
 }
 
 /* This is to change the color of the placeholder */
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #ffffff75;
-}
-
-@media screen and (min-width: 990px) {
-    form {
-        flex-direction: row;
-    }
-
-    form input, form button {
-        padding: 2% 3%;
-        margin: 0 2%;
-    }
-
-    form button {
-        padding: 0 7%;
-    }
 }
 
 
@@ -322,44 +228,16 @@ input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 .contact-info img {
     margin-right: 3%;
 }
+
 .contact-info span a {
     color: rgb(239, 78, 148);
-}
-
-@media screen and (min-width: 990px) {
-    .contact-info {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .contact-info p {
-        flex-basis: 100%;
-        text-align: center;
-    }
-
-    .contact-info div p {
-        text-align: left;
-    }
-
-    .contact-info > div {
-        margin: 3% 0;
-        flex-basis: 33%;
-        justify-content: center;
-    }
 }
 
 
 
 /* GOOGLE MAPS styles */
 /* I didn't create these styles I just searched online how to do it and copied the code. I only modified the widths and heights. */
-.mapouter {
-    position: relative;
-    text-align: right;
-    height: 300px;
-    width: 100%;
-}
-
-.gmap_canvas {
+.map-container {
     overflow: hidden;
     background: none!important;
     height: 300px;
@@ -395,7 +273,7 @@ footer img,
 }
 
 footer button {
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgba(65, 65, 65, 0.75);
     border: none;
     padding: 2%;
@@ -405,13 +283,163 @@ footer button {
     right: 10px;
 }
 
+
+/* MEDIA QUERY MIN-WIDTH: 768 */
 @media screen and (min-width: 768px) {
+    /* GROOM & BRIDE styles */
+    .groom {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+        align-items: center;
+        padding: 10% 2% 0%;
+    }
+
+    .groom .groom-info {
+        margin: 0 3% 0 6%;
+    }
+
+    .bride .bride-info {
+        margin: 0 6% 0 3%;
+    }
+
+    .bride {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* FOOTER styles */
     footer button {
         display: none;
     }
 }
 
+
+
+/* MEDIA QUERY MIN-WIDTH: 990 */
 @media screen and (min-width: 990px) {
+    /* GLOBAL styles */
+    html {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    /* HEADER styles */
+    header {
+        padding: 2% 6%;
+        
+    }
+
+    header h2 {
+        font-size: 4.5rem;
+        margin-bottom: 3%;
+    }
+
+    /* NAV styles */
+    nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: flex-end;
+    }
+
+    nav .menu .active {
+        color: rgb(255, 255, 255);
+    }
+
+    nav label {
+        display: none;
+    }
+
+    nav .menu li {
+        margin-right: 3%;
+    }
+
+    /* GROOM & BRIDE styles */
+    .groom-bride {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .groom .groom-info {
+        margin: 0 3% 0 13%;
+    }
+
+    .bride .bride-info {
+        margin: 0 13% 0 3%;
+    }
+
+    .groom-bride h2,
+    .groom-bride p {
+        flex-basis: 100%;
+    }
+
+    .groom {
+        flex-basis: 50%;
+        padding: 2% 0 6% 7%;
+    }
+
+    .bride {
+        flex-basis: 50%;
+        padding: 2% 7% 6% 0;
+    }
+
+    .groom-bride .heart-icon {
+        color: rgb(239, 78, 148);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 60%;
+        right: 48.5%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+
+    /* FORM styles */
+    form {
+        flex-direction: row;
+    }
+
+    form input, form button {
+        padding: 2% 3%;
+        margin: 0 2%;
+    }
+
+    form button {
+        padding: 0 7%;
+    }
+
+    /* CONTACT-INFO styles */
+    .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-info p {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .contact-info div p {
+        text-align: left;
+    }
+
+    .contact-info > div {
+        margin: 3% 0;
+        flex-basis: 33%;
+        justify-content: center;
+    }
+
+    /* FOOTER styles */
     footer {
         padding: 8% 2%;
     }
