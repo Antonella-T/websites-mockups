@@ -6,6 +6,7 @@
     <title>Dark Shine Corporation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/script.js"></script>
 </head>
 <body>
     <!--  start GENERAL CONTAINER -->
@@ -16,10 +17,11 @@
                 <img src="images/logo.png" alt="DarkShine Corporation logo"/>
             </div>
             <!--  start NAV -->
-            <nav>
-                <label for="toggle"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+            <nav id="main-nav">
+                <div class="hamburger-menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+               <!-- <label for="toggle"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 </label>
-                <input type="checkbox" id="toggle"/>
+                <input type="checkbox" id="toggle"/>-->
                 <ul class="menu">
                     <li><a href="#">Welcome</a></li>
                     <li><a href="#">About</a></li>
@@ -34,44 +36,77 @@
 
         <!--  start GALLERY -->
         <div class="gallery">
-            <div class="gallery-item">
+            <div class="gallery-item active" id="image1b">
                 <img src="images/image1b.jpg" alt="Street view with a yellow car parked"/>
                 <div class="gallery-item-description">
                     <h1>First Image - This is the main title for an image</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus numquam sunt incidunt il.</p>
+                    <a href="#">Image #1:</a> This is the link test in the tabbed navigation panel.
+                </div>
+            </div>
+
+            <div class="gallery-item" id="image2b">
+                <img src="images/image2b.jpg" alt="Empty motorway with lights"/>
+                <div class="gallery-item-description">
+                    <h1>First Image - This is the main title for an image</h1>
+                    <a href="#">Image #2:</a> This is the link test in the tabbed navigation panel.
+                </div>
+            </div>
+
+            <div class="gallery-item" id="image3b">
+                <img src="images/image3b.jpg" alt="Yellow sculture"/>
+                <div class="gallery-item-description">
+                    <h1>First Image - This is the main title for an image</h1>
+                    <a href="#">Image #3:</a> This is the link test in the tabbed navigation panel.
+                </div>
+            </div>
+
+            <div class="gallery-item" id="image4b">
+                <img src="images/image4b.jpg" alt="Black and white landscape"/>
+                <div class="gallery-item-description">
+                    <h1>First Image - This is the main title for an image</h1>
+                    <a href="#">Image #4:</a> This is the link test in the tabbed navigation panel.
+                </div>
+            </div>
+
+            <div class="gallery-item" id="image5b">
+                <img src="images/image5b.jpg" alt="View of a sunny day in the city"/>
+                <div class="gallery-item-description">
+                    <h1>First Image - This is the main title for an image</h1>
+                    <a href="#">Image #5:</a> This is the link test in the tabbed navigation panel.
                 </div>
             </div>
 
             <!--  start THUMBNAILS-CONTAINER -->
             <ul class="thumbnails-container">
-                <li class="thumbnail">
+                <li class="thumbnail" data-img="image1b">
                     <img src="images/image1-small.jpg" alt="Street view with a yellow car parked"/>
                     <p>
-                        <a href="#">Image #1:</a> This is the link test in the tabbed navigation panel.
+                        <!-- I changed the # for javascript:void(0); to stop the scroll up -->
+                        <a href="javascript:void(0);">Image #1:</a> This is the link test in the tabbed navigation panel.
                     </p>                   
                 </li>
-                <li class="thumbnail">
+                <li class="thumbnail" data-img="image2b">
                     <img src="images/image2-small.jpg" alt="Empty motorway with lights"/>
                     <p>
-                        <a href="#">Image #2:</a> This is the link test in the tabbed navigation panel.
+                        <a href="javascript:void(0);">Image #2:</a> This is the link test in the tabbed navigation panel.
                     </p> 
                 </li>
-                <li class="thumbnail">
+                <li class="thumbnail" data-img="image3b">
                     <img src="images/image3-small.jpg" alt="Yellow sculture"/>
                     <p>
-                        <a href="#">Image #3:</a> This is the link test in the tabbed navigation panel.
+                        <a href="javascript:void(0);">Image #3:</a> This is the link test in the tabbed navigation panel.
                     </p> 
                 </li>
-                <li class="thumbnail">
+                <li class="thumbnail" data-img="image4b">
                     <img src="images/image4-small.jpg" alt="Black and white landscape"/>
                     <p>
-                        <a href="#">Image #4:</a> This is the link test in the tabbed navigation panel.
+                        <a href="javascript:void(0);">Image #4:</a> This is the link test in the tabbed navigation panel.
                     </p> 
                 </li>
-                <li class="thumbnail">
+                <li class="thumbnail" data-img="image5b">
                     <img src="images/image5-small.jpg" alt="View of a sunny day in the city"/>
                     <p>
-                        <a href="#">Image #5:</a> This is the link test in the tabbed navigation panel.
+                        <a href="javascript:void(0);">Image #5:</a> This is the link test in the tabbed navigation panel.
                     </p> 
                 </li>
             </ul>
