@@ -61,10 +61,6 @@ header nav .fa {
     font-size: 2em;
 }
 
-header nav.menu-open .menu {
-    max-height: 500px;
-}
-
 header .menu {
     text-align: center;
     padding: 0;
@@ -79,9 +75,17 @@ header .menu li {
     margin-bottom: 3%;
 }
 
-header .hamburger-menu {
+header #toggle:checked + .menu {
+    max-height: 500px;
+}
+
+header label {
     text-align: right;
     cursor: pointer;
+}
+
+header input {
+    display: none; /* because I want to hide the chechbox. */
 }
 
 header .logo-container {
@@ -121,7 +125,6 @@ header .logo-container {
 .thumbnail {
     text-align: center;
     flex-grow: 1;
-    cursor: pointer;
 }
 
 .thumbnail img {
@@ -182,7 +185,7 @@ footer {
         flex-direction: row;
     }
 
-    header .hamburger-menu {
+    header label {
         display: none;
     }
 
@@ -191,6 +194,10 @@ footer {
         flex-grow: 1;
         max-height: initial;
         justify-content: flex-end;
+    }
+
+    header #toggle:checked + .menu {
+        display: flex;
     }
 
     header .menu li {
@@ -245,7 +252,7 @@ footer {
     .sub-banner {
         display: block;
         padding: 1% 2%;
-        margin: 2% 2% 0;
+        margin: 0 2%;
         background-color: #3a3a3a;
     }
 

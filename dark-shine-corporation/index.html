@@ -1,183 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dark Shine Corporation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
     <script src="scripts/script.js"></script>
-</head>
-<body>
+  </head>
+
+  <body>
     <!--  start GENERAL CONTAINER -->
     <div class="container">
-        <!--  start HEADER -->
-        <header>
-            <div class="logo-container">
-                <img src="images/logo.png" alt="DarkShine Corporation logo"/>
-            </div>
-            <!--  start NAV -->
-            <nav id="main-nav">
-                <div class="hamburger-menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
-               <!-- <label for="toggle"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-                </label>
-                <input type="checkbox" id="toggle"/>-->
-                <ul class="menu">
-                    <li><a href="#">Welcome</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <!--  end NAV -->
-        </header>
-        <!--  end HEADER -->
-
-        <!--  start GALLERY -->
-        <div class="gallery">
-            <div class="gallery-item active" id="image1b">
-                <img src="images/image1b.jpg" alt="Street view with a yellow car parked"/>
-                <div class="gallery-item-description">
-                    <h1>First Image - This is the main title for an image</h1>
-                    <a href="#">Image #1:</a> This is the link test in the tabbed navigation panel.
-                </div>
-            </div>
-
-            <div class="gallery-item" id="image2b">
-                <img src="images/image2b.jpg" alt="Empty motorway with lights"/>
-                <div class="gallery-item-description">
-                    <h1>First Image - This is the main title for an image</h1>
-                    <a href="#">Image #2:</a> This is the link test in the tabbed navigation panel.
-                </div>
-            </div>
-
-            <div class="gallery-item" id="image3b">
-                <img src="images/image3b.jpg" alt="Yellow sculture"/>
-                <div class="gallery-item-description">
-                    <h1>First Image - This is the main title for an image</h1>
-                    <a href="#">Image #3:</a> This is the link test in the tabbed navigation panel.
-                </div>
-            </div>
-
-            <div class="gallery-item" id="image4b">
-                <img src="images/image4b.jpg" alt="Black and white landscape"/>
-                <div class="gallery-item-description">
-                    <h1>First Image - This is the main title for an image</h1>
-                    <a href="#">Image #4:</a> This is the link test in the tabbed navigation panel.
-                </div>
-            </div>
-
-            <div class="gallery-item" id="image5b">
-                <img src="images/image5b.jpg" alt="View of a sunny day in the city"/>
-                <div class="gallery-item-description">
-                    <h1>First Image - This is the main title for an image</h1>
-                    <a href="#">Image #5:</a> This is the link test in the tabbed navigation panel.
-                </div>
-            </div>
-
-            <!--  start THUMBNAILS-CONTAINER -->
-            <ul class="thumbnails-container">
-                <li class="thumbnail" data-img="image1b">
-                    <img src="images/image1-small.jpg" alt="Street view with a yellow car parked"/>
-                    <p>
-                        <!-- I changed the # for javascript:void(0); to stop the scroll up -->
-                        <a href="javascript:void(0);">Image #1:</a> This is the link test in the tabbed navigation panel.
-                    </p>                   
-                </li>
-                <li class="thumbnail" data-img="image2b">
-                    <img src="images/image2-small.jpg" alt="Empty motorway with lights"/>
-                    <p>
-                        <a href="javascript:void(0);">Image #2:</a> This is the link test in the tabbed navigation panel.
-                    </p> 
-                </li>
-                <li class="thumbnail" data-img="image3b">
-                    <img src="images/image3-small.jpg" alt="Yellow sculture"/>
-                    <p>
-                        <a href="javascript:void(0);">Image #3:</a> This is the link test in the tabbed navigation panel.
-                    </p> 
-                </li>
-                <li class="thumbnail" data-img="image4b">
-                    <img src="images/image4-small.jpg" alt="Black and white landscape"/>
-                    <p>
-                        <a href="javascript:void(0);">Image #4:</a> This is the link test in the tabbed navigation panel.
-                    </p> 
-                </li>
-                <li class="thumbnail" data-img="image5b">
-                    <img src="images/image5-small.jpg" alt="View of a sunny day in the city"/>
-                    <p>
-                        <a href="javascript:void(0);">Image #5:</a> This is the link test in the tabbed navigation panel.
-                    </p> 
-                </li>
-            </ul>
-            <!--  end THUMBNAILS-CONTAINER -->
+      <!--  start HEADER -->
+      <header>
+        <div class="logo-container">
+          <img src="images/logo.png" alt="DarkShine Corporation logo" />
         </div>
-        <!--  end GALLERY -->
+        <!--  start NAV -->
+        <nav>
+          <label for="toggle"
+            ><i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+          </label>
+          <input type="checkbox" id="toggle" />
+          <ul class="menu">
+            <li><a href="#">Welcome</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <!--  end NAV -->
+      </header>
+      <!--  end HEADER -->
 
-        <!--  start SUB-BANNER -->
-        <div class="sub-banner">
-            <p>This is a sub-banner area on the page. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      <!--  start GALLERY -->
+      <div class="gallery">
+        <div class="gallery-item active" id="image1b">
+          <img
+            src="images/image1b.jpg"
+            alt="Street view with a yellow car parked"
+          />
+          <div class="gallery-item-description">
+            <h1>First Image - This is the main title for an image</h1>
+            <a href="#">Image #1:</a> This is the link test in the tabbed
+            navigation panel.
+          </div>
+        </div>
+
+        <div class="gallery-item" id="image2b">
+          <img src="images/image2b.jpg" alt="Empty motorway with lights" />
+          <div class="gallery-item-description">
+            <h1>First Image - This is the main title for an image</h1>
+            <a href="#">Image #2:</a> This is the link test in the tabbed
+            navigation panel.
+          </div>
+        </div>
+
+        <div class="gallery-item" id="image3b">
+          <img src="images/image3b.jpg" alt="Yellow sculture" />
+          <div class="gallery-item-description">
+            <h1>First Image - This is the main title for an image</h1>
+            <a href="#">Image #3:</a> This is the link test in the tabbed
+            navigation panel.
+          </div>
+        </div>
+
+        <div class="gallery-item" id="image4b">
+          <img src="images/image4b.jpg" alt="Black and white landscape" />
+          <div class="gallery-item-description">
+            <h1>First Image - This is the main title for an image</h1>
+            <a href="#">Image #4:</a> This is the link test in the tabbed
+            navigation panel.
+          </div>
+        </div>
+
+        <div class="gallery-item" id="image5b">
+          <img src="images/image5b.jpg" alt="View of a sunny day in the city" />
+          <div class="gallery-item-description">
+            <h1>First Image - This is the main title for an image</h1>
+            <a href="#">Image #5:</a> This is the link test in the tabbed
+            navigation panel.
+          </div>
+        </div>
+
+        <!--  start THUMBNAILS-CONTAINER -->
+        <ul class="thumbnails-container">
+          <li class="thumbnail" data-img="image1b">
+            <img
+              src="images/image1-small.jpg"
+              alt="Street view with a yellow car parked"
+            />
+            <p>
+              <!-- I changed the # for javascript:void(0); to stop the scroll up -->
+              <a href="javascript:void(0);">Image #1:</a> This is the link test
+              in the tabbed navigation panel.
             </p>
+          </li>
+          <li class="thumbnail" data-img="image2b">
+            <img
+              src="images/image2-small.jpg"
+              alt="Empty motorway with lights"
+            />
+            <p>
+              <a href="javascript:void(0);">Image #2:</a> This is the link test
+              in the tabbed navigation panel.
+            </p>
+          </li>
+          <li class="thumbnail" data-img="image3b">
+            <img src="images/image3-small.jpg" alt="Yellow sculture" />
+            <p>
+              <a href="javascript:void(0);">Image #3:</a> This is the link test
+              in the tabbed navigation panel.
+            </p>
+          </li>
+          <li class="thumbnail" data-img="image4b">
+            <img
+              src="images/image4-small.jpg"
+              alt="Black and white landscape"
+            />
+            <p>
+              <a href="javascript:void(0);">Image #4:</a> This is the link test
+              in the tabbed navigation panel.
+            </p>
+          </li>
+          <li class="thumbnail" data-img="image5b">
+            <img
+              src="images/image5-small.jpg"
+              alt="View of a sunny day in the city"
+            />
+            <p>
+              <a href="javascript:void(0);">Image #5:</a> This is the link test
+              in the tabbed navigation panel.
+            </p>
+          </li>
+        </ul>
+        <!--  end THUMBNAILS-CONTAINER -->
+      </div>
+      <!--  end GALLERY -->
+
+      <!--  start SUB-BANNER -->
+      <div class="sub-banner" id="quote">
+        <p>
+          This is a sub-banner area on the page. Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit.
+        </p>
+      </div>
+      <!--  end SUB-BANNER -->
+
+      <!--  start MAIN -->
+      <main>
+        <h2>This is the Darkshine Template</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+          voluptatem, autem omnis qui repellat ullam consectetur voluptate
+          temporibus molestiae beatae maxime veniam reiciendis repudiandae. Iste
+          voluptates earum similique aspernatur minus. Lorem ipsum dolor sit,
+          amet consectetur adipisicing elit. Incidunt voluptatem, autem omnis
+          qui repellat ullam consectetur voluptate temporibus molestiae beatae
+          maxime veniam reiciendis repudiandae. Iste voluptates earum similique
+          aspernatur minus.
+        </p>
+
+        <!-- start POSTS-CONTAINER -->
+        <div class="posts-container">
+          <!-- start POSTS 1 -->
+          <div class="posts">
+            <img src="images/small1.jpg" alt="" />
+
+            <article>
+              <h3>SUBHEADING TITLE</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit,
+                suscipit iure, ipsum pariatur distinctio cum consequuntur.
+                <br />
+                <a href="#">Click Here For More Information</a>
+              </p>
+
+              <h3>SUBHEADING TITLE</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit,
+                suscipit iure, ipsum pariatur distinctio cum consequuntur.
+                <br />
+                <a href="#">Click Here For More Information</a>
+              </p>
+            </article>
+          </div>
+          <!-- end POSTS 1 -->
+
+          <!-- start POSTS 2 -->
+          <div class="posts">
+            <img src="images/small2.jpg" alt="" />
+
+            <article>
+              <h3>SUBHEADING TITLE</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit,
+                suscipit iure, ipsum pariatur distinctio cum consequuntur.
+                <br />
+                <a href="#">Click Here For More Information</a>
+              </p>
+
+              <h3>SUBHEADING TITLE</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit,
+                suscipit iure, ipsum pariatur distinctio cum consequuntur.
+                <br />
+                <a href="#">Click Here For More Information</a>
+              </p>
+            </article>
+          </div>
+          <!-- end POSTS 2 -->
         </div>
-        <!--  end SUB-BANNER -->
+        <!-- end POSTS-CONTAINER -->
+      </main>
+      <!--  end MAIN -->
 
-        <!--  start MAIN -->
-        <main>
-            <h2>This is the Darkshine Template</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatem, autem omnis qui repellat ullam consectetur voluptate temporibus molestiae beatae maxime veniam reiciendis repudiandae. Iste voluptates earum similique aspernatur minus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatem, autem omnis qui repellat ullam consectetur voluptate temporibus molestiae beatae maxime veniam reiciendis repudiandae. Iste voluptates earum similique aspernatur minus.</p>
-
-            <!-- start POSTS-CONTAINER -->
-            <div class="posts-container">
-                <!-- start POSTS 1 -->
-                <div class="posts">
-                    <img src="images/small1.jpg" alt=""/>
-
-                    <article>
-                        <h3>SUBHEADING TITLE</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, suscipit iure, ipsum pariatur distinctio cum consequuntur. 
-                            <br/>
-                            <a href="#">Click Here For More Information</a>
-                        </p>
-
-                        <h3>SUBHEADING TITLE</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, suscipit iure, ipsum pariatur distinctio cum consequuntur.
-                             <br/>
-                             <a href="#">Click Here For More Information</a>
-                        </p>
-                    </article>
-                </div>
-                <!-- end POSTS 1 -->
-
-                <!-- start POSTS 2 -->
-                <div class="posts">
-                    <img src="images/small2.jpg" alt=""/>
-
-                    <article>
-                        <h3>SUBHEADING TITLE</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, suscipit iure, ipsum   pariatur distinctio cum consequuntur. 
-                            <br/>
-                            <a href="#">Click Here For More Information</a>
-                        </p>
-
-                        <h3>SUBHEADING TITLE</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, suscipit iure, ipsum pariatur distinctio cum consequuntur. 
-                            <br/>
-                            <a href="#">Click Here For More Information</a>
-                        </p>
-                    </article>
-                </div>
-                <!-- end POSTS 2 -->
-            </div>
-            <!-- end POSTS-CONTAINER -->
-        </main>
-        <!--  end MAIN -->
-
-        <!--  start FOOTER -->
-        <footer>
-            <p>&copy;Copyright 2020 | Dark Shine Corporation | 1234 Main Street, Los Angeles, California 90210 | 213 555 5555</p>
-        </footer>
-        <!--  end FOOTER -->
+      <!--  start FOOTER -->
+      <footer>
+        <p>
+          &copy;Copyright 2020 | Dark Shine Corporation | 1234 Main Street, Los
+          Angeles, California 90210 | 213 555 5555
+        </p>
+      </footer>
+      <!--  end FOOTER -->
     </div>
     <!--  end GENERAL CONTAINER -->
-</body>
+  </body>
 </html>

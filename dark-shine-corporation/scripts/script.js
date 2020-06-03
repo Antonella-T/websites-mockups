@@ -1,50 +1,58 @@
-console.log('Script file loaded.');
+$(document).ready(function () {
 
-document.addEventListener("DOMContentLoaded", function () {
+  /***** RANDOM QUOTE SCRIPT START *****/
 
-  console.log('HTML file loaded and parsed.');
+  // 1. Create array with quotes to display.
+  var quotes = [
+    'Welcome to our Dark Shine Corporation website!',
+    'Bienvenido a nuestro sitio web Dark Shine Corporation!',
+    'Willkommen auf unserer Dark Shine Corporation-Website!',
+    'Bienvenue sur notre site Web Dark Shine Corporation!',
+    'Benvenuti nel nostro sito Web di Dark Shine Corporation!',
+    'Welkom op onze Dark Shine Corporation-website!',
+  ];
+
+  // 2. Find the paragraph to display the quotes and store in a variable to avoid search in every displayQuote.
+  var quoteParagraph = $('#quote p');
+
+  // 3. Create a function to display the quotes.
+  function displayQuote() {
+    // I generate a randorm decimal number based on the quotes.length and then implement floor() to convert to a integer and get a quote to display in the paragraph.
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteParagraph.text(randomQuote);
+  }
+  
+  // 4. Apply JS setInterval to call the function every 3 seconds. 
+  setInterval(displayQuote, 3000);
+  /***** RANDOM QUOTE SCRIPT END *****/
 
 
-  var thumbnails = document.querySelectorAll('.thumbnail');
+  /***** SHOWCASE PAGE START *****/
 
+  // 1. Store all thumbnails in a variable.
+  var thumbnails = $('.thumbnail');
+
+  // 2. Loop over all elements to attach an event in each one.
   for (var i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].addEventListener("click", changeImage);
+    // Listen for click event and call changeImage to update banner.
+    $(thumbnails[i]).on('click', changeImage);
   }
 
-  document.querySelector('.hamburger-menu').addEventListener('click', hamburgerMenu);
-});
+  // 3. Function to change the banner.
+  function changeImage() {
+    // 1. Find the corresponding banner for the clicked thumbnail.
+    var bannerImage = $('#' + $(this).attr('data-img'));
 
-function changeImage(event) {
-  //1. detectar en que elemento hizo el usuario click.
-
-  var bannerImage = document.getElementById(this.getAttribute('data-img'));
-
-  //2 si la img activa == al click no correr la funcion.
-
-  bannerImage.classList // devuelve array con strings, chequear si active se enecuentra y de ser así return
-  for (var i = 0; i < bannerImage.classList.length; i++) {
-    if (bannerImage.classList[i] == 'active') {
+    // 2 If the banner is currently active, return from the function to cancel.
+    if (bannerImage.hasClass('active')) {
       return;
-    };
+    }
+
+    //3. Before display the new banner I hide the active img.
+    $('.active').removeClass('active');
+
+    //4. Display the new banner.
+    bannerImage.addClass('active');
   }
-  //3. ocular img activa.
-  //buscar que elemento tiene la clase active y removerlo
-  document.querySelector('.active').classList.remove('active');
-
-  //4. mostrar la img correspondiente.
-  // a banner img le agrego la clase active para q ponga display block
-  bannerImage.classList.add('active');
-}
-
-// HAMBURGER MENU 
-//press the menu and display the content
-//if the menu is displayed and press again close the content.
-
-function hamburgerMenu() {
-  //1. obtener el elemento de html
-  var menuObj = document.querySelector('#main-nav');
-  //2. fijarme si tiene la clase para mostrar
-  menuObj.classList.toggle('menu-open');
-  //3. agregarle la clase si no la tiene.
-  //4. sacarle la clase
-}
+  /***** SHOWCASE PAGE END *****/
+});
